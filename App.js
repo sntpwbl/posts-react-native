@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import { stylesApp } from './src/styles/AppStyleSheet'
 import Post from './src/components/Post'
 import api from './src/config/axios'
+import CriarPost from './src/components/CriarPost';
 
 export default function App() {
   const [posts, setPosts] = useState([])
@@ -26,6 +27,7 @@ export default function App() {
   return (
     <View style={stylesApp.container} >
         <Text style={stylesApp.text}>Posts</Text>
+        <CriarPost />
         {posts && (
           <View>
           <FlatList 
